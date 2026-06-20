@@ -1,3 +1,5 @@
+![LLMWS_alman-os_local_workspace](https://github.com/alman-os/llm_local_workspace/blob/main/LLWS_image_2.jpeg)
+
 # LLM Local Workspace (LLWS)
 
 LLM Local Workspace is a beginner-friendly folder for running your first local GGUF model with `llama.cpp` on macOS Apple Silicon.
@@ -36,8 +38,6 @@ Local models are useful, but they are not magic.
 **Local models are resource intensive.** On a mid-tier Mac, close heavy apps before starting a model. If your Mac slows down, use a smaller model or a lower context size.
 
 **Do not treat model output as guaranteed truth.** Local LLMs can summarize, rewrite, draft, classify, and transform text. They can also invent confident wrong answers, especially on exact facts, decisions, and step-by-step technical instructions.
-
-**Do not commit model files.** GGUF files are often multiple GB and may have their own license terms. This repo is for the guide, folder structure, and placeholder only.
 
 ## Installation
 
@@ -146,7 +146,7 @@ Stop the server with `Control-C` in the terminal where it is running.
 - Summarize private notes without sending them to a hosted chatbot.
 - Test small models before building an app around them.
 - Learn the difference between model files, quantization, context, and local serving.
-- Use an OpenAI-compatible local endpoint for experiments.
+- Use an OpenAI/Claude-compatible local endpoint for experiments.
 - Build confidence before trying larger tools like UI wrappers, agents, or custom Python scripts.
 
 ## Troubleshooting
@@ -227,8 +227,6 @@ Useful contributions include:
 - common error messages and fixes
 - safer default commands
 
-Do not add GGUF files to the repo. Link to model pages instead.
-
 ## Useful Links
 
 - llama.cpp: <https://github.com/ggml-org/llama.cpp>
@@ -236,3 +234,18 @@ Do not add GGUF files to the repo. Link to model pages instead.
 - Homebrew llama.cpp formula: <https://formulae.brew.sh/formula/llama.cpp>
 - Hugging Face GGUF docs: <https://huggingface.co/docs/hub/en/gguf>
 - Hugging Face GGUF model browser: <https://huggingface.co/models?library=gguf>
+
+**Very important**
+If you read all the way here, that means you're an OG and you definitely want to get started.
+So another important caveat to know:
+  - Local models are not as polished as the public models, so sometimes their thinking process can be excessive.
+  - It is advisable to use these flags with your prompts:
+    - $do-not-do-a-final-check=true
+    - $stop-overthinking=true
+    - $just-give-me-a-usable-new-list=true
+    - $dont-be-perfectionistic-give-me-usability=true
+
+| Model | Link | Why recommended | Honest Caveat |
+| --- | --- | --- |  --- |
+| Phi-4-mini-reasoning-abliterated-Q4_K_M-GGUF | <https://huggingface.co/dev-196/Phi-4-mini-reasoning-abliterated-Q4_K_M-GGUF> | Mechanical tasks, slot-generator, mix words out of existing reference-point; simplest model to experience the local freedom. | Sometimes has a trailing problem / infinite-looping at the end. |
+| Qwen3.5-4B-Uncensored-HauhauCS-Aggressive-Q4_K_M.gguf | <https://huggingface.co/HauhauCS/Qwen3.5-4B-Uncensored-HauhauCS-Aggressive> | Smarter randomized generations, can actually synthesize new combinations. | Sometimes prone to overthinking. |
