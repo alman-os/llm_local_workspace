@@ -1,0 +1,12 @@
+# Local model files are intentionally not part of this repo.
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Local machine files.
+.DS_Store
+.venv/
+__pycache__/
+.vscode/
